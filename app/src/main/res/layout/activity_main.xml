@@ -3,63 +3,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
     android:background="#0091EA"
     tools:context="com.mbbs.android.smartnotify.MainActivity">
-    <HorizontalScrollView
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true">
-        <FrameLayout
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="SMART NOTIFY"
+            android:layout_marginTop="25dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="25dp"/>
+    </FrameLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/Scroll"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
-                android:gravity="center_horizontal"
-                android:text="Smart Notify"
-                android:textAlignment="gravity"
-                android:textColor="#ffffff"
-                android:textSize="30dp"
-                android:textStyle="italic" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:src="@drawable/msg"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="120dp"
-                android:layout_marginLeft="65dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="top"/>
 
-            <EditText
+            <TextView
+                android:id="@+id/tv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
                 android:gravity="center"
                 android:textColorHint="#ffffff"
-                android:layout_marginTop="200dp"
-                android:layout_marginLeft="120dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp"
-                android:lines="3"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:backgroundTint="#009688"
-                android:hint="Message" />
+                android:hint="Send text"
+                android:textAllCaps="true"/>
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Share with friends"
-                android:textColor="#ffffff"
-                android:layout_marginTop="325dp"
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0091EA"
                 android:gravity="center"
-                android:layout_marginLeft="125dp"
-                android:background="#009688"/>
-        </FrameLayout>
+                android:text="@string/text1"
+                android:lines="2"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:layout_marginTop="5dp"/>
+    </LinearLayout>
     </HorizontalScrollView>
     <!-- Login progress -->
     <ProgressBar
@@ -79,26 +90,29 @@
             android:layout_alignParentBottom="true">
 
             <Button
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:text=" CREATE NEW ACCOUNT "
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                style="@style/button1"
+                android:background="@drawable/mybutton"/>
+
+            <Button
                 android:id="@+id/sign_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5dp"
-                android:background="#76FF03"
-                android:text="CREATE NEW ACCOUNT"
+                android:text="Sign in"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="#FFFFFF"
                 android:textSize="18dp"
-                android:textStyle="bold" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:background="#0091EA"
-                android:layout_marginLeft="150dp"
-                android:text="SIGN IN"
-                android:textColor="#ffffff"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                style="@style/Widget.AppCompat.Button.Borderless"/>
         </LinearLayout>
 </RelativeLayout>
