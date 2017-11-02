@@ -1,4 +1,4 @@
-package com.mbbs.android.smartnotify;
+package com.mbbs.android.smartpost;
 
 import org.junit.Test;
 

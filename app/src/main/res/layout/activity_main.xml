@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0091EA"
-    tools:context="com.mbbs.android.smartnotify.MainActivity">
+    tools:context="com.mbbs.android.smartpost.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="25dp"
-            android:text="SMART NOTIFY"
+            android:text="SMART POST"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#ffffff"
@@ -107,7 +107,8 @@
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="SignUp"/>
 
             <Button
                 android:id="@+id/sign_in"
@@ -122,6 +123,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="18dp"
                 android:textStyle="bold"
+                android:onClick="Signin"
                 />
         </LinearLayout>
 </RelativeLayout>

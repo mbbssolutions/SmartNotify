@@ -1,4 +1,4 @@
-package com.mbbs.android.smartnotify;
+package com.mbbs.android.smartpost;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.mbbs.android.smartnotify", appContext.getPackageName());
+        assertEquals("com.mbbs.android.smartpost", appContext.getPackageName());
     }
 }

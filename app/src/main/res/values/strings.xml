@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">SmartNotify</string>
+    <string name="app_name">smartpost</string>
     <string name="text1">Send Invitation to your friends and family via text message</string>
     <string name="create_new_account">CREATE NEW ACCOUNT</string>
-    <string name="smart_notify">SMART NOTIFY</string>
+    <string name="smart_post">SMART POST</string>
     <string name="send_text">Send text</string>
     <string name="sign_in">Sign in</string>
 </resources>

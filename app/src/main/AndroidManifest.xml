@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mbbs.android.smartnotify">
+    package="com.mbbs.android.smartpost">
 
     <application
         android:allowBackup="true"
