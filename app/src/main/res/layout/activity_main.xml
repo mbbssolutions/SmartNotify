@@ -3,127 +3,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0091EA"
+    android:background="@color/homescreen"
     tools:context="com.mbbs.android.smartpost.MainActivity">
 
-    <FrameLayout
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/horizontalScrollView"
-        android:layout_alignParentBottom="true">
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="87dp"
+        android:fontFamily="@font/lobster"
+        android:text="@string/smart_post"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="37sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical|center_horizontal">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/sign_up"
+            style="@style/button1"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:text="SMART POST"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/signupbutton"
+            android:onClick="SignUp"
+            android:text="@string/create_new_account"
             android:textAlignment="center"
-            android:textAllCaps="true"
             android:textColor="#ffffff"
-            android:textSize="36sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
-    </FrameLayout>
 
+        <Button
+            android:id="@+id/sign_in"
+            style="@style/button2"
+            android:layout_width="234dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/signinbutton"
+            android:onClick="Signin"
+            android:text="@string/sign_in"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:id="@+id/horizontalScrollView">
-
-        <LinearLayout
-            android:id="@+id/Scroll"
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:orientation="vertical"
-            android:weightSum="1">
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
 
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="361dp"
-                android:layout_height="88dp"
-                android:layout_gravity="top"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/msg_icon" />
-
-            <TextView
-                android:id="@+id/tv1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#009688"
-                android:gravity="center"
-                android:hint="SEND TEXT"
-                android:textAllCaps="true"
-                android:textColorHint="#ffffff"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#0091EA"
-                android:gravity="center"
-                android:text="@string/text1"
-                android:lines="2"
-                android:textAlignment="center"
-                android:textColor="#ffffff"
-                android:layout_marginTop="5dp"/>
     </LinearLayout>
-    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dots_height"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_pager"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="13dp"
+        android:clipToPadding="false"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
     <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:visibility="gone"/>
 
-        <LinearLayout
-            android:id="@+id/email_login_form"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:orientation="vertical"
-            android:layout_alignParentBottom="true">
-
-            <Button
-                android:id="@+id/sign_up"
-                style="@style/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/mybutton"
-                android:text="  CREATE NEW ACCOUNT  "
-                android:textAlignment="center"
-                android:textColor="#ffffff"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:onClick="SignUp"/>
-
-            <Button
-                android:id="@+id/sign_in"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="5dp"
-                android:background="#0091EA"
-                android:text="Sign in"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:onClick="Signin"
-                />
-        </LinearLayout>
 </RelativeLayout>
