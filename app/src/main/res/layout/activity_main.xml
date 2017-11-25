@@ -14,12 +14,12 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="87dp"
-        android:fontFamily="@font/lobster"
-        android:text="@string/smart_post"
+        android:text="@string/app_name"
+        android:fontFamily="@font/bas"
+        android:textStyle="bold"
         android:textAlignment="center"
-        android:textAllCaps="true"
         android:textColor="#ffffff"
-        android:textSize="37sp" />
+        android:textSize="47sp" />
 
 
     <android.support.v4.view.ViewPager
@@ -44,7 +44,7 @@
         <Button
             android:id="@+id/sign_up"
             style="@style/button1"
-            android:layout_width="230dp"
+            android:layout_width="229dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="15dp"
@@ -64,7 +64,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
             android:background="@drawable/signinbutton"
-            android:onClick="Signin"
+            android:onClick="@layout/activity_login"
             android:text="@string/sign_in"
             android:textAlignment="center"
             android:textColor="#FFFFFF"

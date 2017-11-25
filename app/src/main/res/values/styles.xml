@@ -18,7 +18,7 @@
         <item name="android:background">#B2FF59</item>
         <item name="android:topRightRadius">15sp</item>
     </style>
-    <style name="button2" parent="@android:style/Widget.Button">
+    <style name="button2" parent="@android:style/Widget.Holo.Button.Borderless">
         <item name="android:gravity">center_vertical|center_horizontal</item>
         <item name="android:textColor">#FFFFFFFF</item>
         <item name="android:shadowColor">#FF000000</item>
@@ -32,5 +32,12 @@
         <item name="android:background">#B2FF59</item>
         <item name="android:topRightRadius">15sp</item>
     </style>
+    <style name="Hinttext" parent="TextAppearance.AppCompat.Small">
+            <item name="android:textColor">#FFFFFF</item>
 
+    </style>
+    <style name="MYEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="colorControlNormal">#808080</item>
+    </style>
 </resources>

@@ -39,6 +39,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+        Button signup = (Button)findViewById(R.id.sign_up);
+        Button signin =(Button)findViewById(R.id.sign_in);
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(MainActivity.this,SignupActivity.class);
+                startActivity(i);
+            }
+        });
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(i);
+            }
+        });
 
 
 
